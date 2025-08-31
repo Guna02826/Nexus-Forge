@@ -1,10 +1,7 @@
 import axios from "axios";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const API = axios.create({
-  baseURL: process.env.BASE_URL,
+  baseURL: process.env.VITE_API_KEY,
 });
 
 // Attach JWT automatically
