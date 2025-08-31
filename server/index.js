@@ -14,6 +14,12 @@ app.use(express.json());
 
 // routes
 app.use("/api/health", HealthRoutes);
+
+app.use(cors({
+  origin: process.env.CLIENT_URL, 
+  credentials: true
+}));
+
 app.use("/api/auth", authRoutes);
 app.use("/api/docs", docRoutes);
 
